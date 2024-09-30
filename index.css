@@ -1,0 +1,143 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: white;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  font-weight: 500;
+  color:#f87060;
+  text-decoration: inherit;
+}
+a:hover {
+  color: #f87060;
+}
+
+/* body {
+  margin: 0;
+  display: flex;
+  place-items: center;
+  min-width: 320px;
+  min-height: 100vh;
+} */
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+button {
+  border-radius: 8px;
+  border: 1px solid transparent;
+  padding: 0.6em 1.2em;
+  font-size: 1em;
+  font-weight: 500;
+  font-family: inherit;
+  background-color: #1a1a1a;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #f87060;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+
+body.dark-mode {
+  background-color: #222; /* Dark background for the whole page */
+  color: white; /* Light text color */
+}
+
+.dark-mode .bg-white {
+  background-color: #000; /* Full black background for standard sections */
+  color: white;
+}
+
+.dark-mode .bg-light-black {
+  background-color: #333; /* Lighter black background for flex sections */
+  color: white;
+}
+
+.dark-mode .text-indigo-950 {
+  color: white; /* Adjust text color in dark mode */
+}
+
+.dark-mode .border {
+  border-color: #444; /* Darker border color */
+}
+
+
+
+/* Style the slider track */
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 8px;
+  background:#CDD7D6; /* Light gray background */
+  border-radius: 5px;
+  outline: none;
+}
+
+/* Style the slider thumb (circle) */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background:#102542; /* Red slider thumb */
+  cursor: pointer;
+  
+  transition: background 0.2s ease;
+}
+
+
+/* For Firefox */
+input[type="range"]::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  background:#102542;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+@media (prefers-color-scheme: light) {
+  :root {
+    color: #213547;
+    background-color: #ffffff;
+  }
+  a:hover {
+    color:#f87060;
+  }
+  button {
+    background-color: #f9f9f9;
+  }
+}
+
+.tooltip {
+  position: relative;
+  background-color:#102542;
+  color: #cdd7d6;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px;
+  z-index: 1000;
+}
+
